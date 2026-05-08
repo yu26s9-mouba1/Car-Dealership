@@ -22,7 +22,17 @@ public class Dealership {
         this.inventory = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 
     //A method to add vehicles to the arrayList
     public void addVehicle(Vehicle vehicle) {
