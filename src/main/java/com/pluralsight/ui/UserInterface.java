@@ -1,12 +1,17 @@
-package com.pluralsight;
+package com.pluralsight.ui;
+import com.pluralsight.models.Dealership;
+import com.pluralsight.data.DealershipFileManager;
+import com.pluralsight.models.Vehicle;
+
 import java.util.ArrayList;
 
 public class UserInterface {
     private Dealership dealership;
-    private Console console;
+
 
 
     public UserInterface() {
+
     }
 
 
@@ -112,6 +117,8 @@ public class UserInterface {
     }
 
     private void processGetByPriceRequest() {
+
+        
 
     }
 

@@ -1,4 +1,5 @@
-package com.pluralsight;
+package com.pluralsight.models;
+
 import java.util.ArrayList;
 
 
