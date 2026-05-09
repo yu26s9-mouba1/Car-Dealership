@@ -54,16 +54,7 @@ public class DealershipFileManager {
                     int odometer = Integer.parseInt(vehicleInfo[6]);
                     double price = Double.parseDouble(vehicleInfo[7]);
 
-                    Vehicle vehicle = new Vehicle(
-                            vin,
-                            year,
-                            make,
-                            model,
-                            vehicleType,
-                            color,
-                            odometer,
-                            price
-                    );
+                    Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
 
                     dealership.addVehicle(vehicle);
                 }
@@ -96,25 +87,25 @@ public class DealershipFileManager {
 
             bw.newLine();
 
-            // Loops through every vehicle in inventory
-//            for (Vehicle vehicle : dealership.getAllVehicles()) {
-//
-//                // Writes each vehicle in pipe format
-//                bw.write(
-//                        vehicle.getVin() + "|" +
-//                                vehicle.getYear() + "|" +
-//                                vehicle.getMake() + "|" +
-//                                vehicle.getModel() + "|" +
-//                                vehicle.getVehicleType() + "|" +
-//                                vehicle.getColor() + "|" +
-//                                vehicle.getOdometer() + "|" +
-//                                vehicle.getPrice()
-//                );
-//
-//
-//                bw.newLine();
-//            }
-//
+             //Loops through every vehicle in inventory
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
+
+                // Writes each vehicle in pipe format
+                bw.write(
+                        vehicle.getVin() + "|" +
+                                vehicle.getYear() + "|" +
+                                vehicle.getMake() + "|" +
+                                vehicle.getModel() + "|" +
+                                vehicle.getVehicleType() + "|" +
+                                vehicle.getColor() + "|" +
+                                vehicle.getOdometer() + "|" +
+                                vehicle.getPrice()
+                );
+
+
+                bw.newLine();
+            }
+
             bw.close();
 
             System.out.println("Dealership saved successfully!");
